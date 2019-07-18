@@ -1,20 +1,21 @@
 /**
 * Created by GoLand
 * User: dollarkiller
-* Date: 19-6-18
-* Time: 上午10:11
+* Date: 19-7-18
+* Time: 上午11:18
 * */
 package router
 
-import (
-	"github.com/julienschmidt/httprouter"
-	"net/http"
-)
+import "github.com/gin-gonic/gin"
 
-func RegisterRouter() *httprouter.Router {
-	router := httprouter.New()
+func RegisterRouter() *gin.Engine {
+	engine := gin.New()
 
-	router.ServeFiles("/static/*filepath", http.Dir("./view/static"))
+	router(engine)
 
-	return router
+	return engine
+}
+
+func router(app *gin.Engine) {
+
 }

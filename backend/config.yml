@@ -1,0 +1,19 @@
+
+# 漫画网站配置文件
+
+app:
+  host: ":8085"
+  debug: true
+  baseurl: "http://127.0.0.1:8085"
+
+mysql:
+  dsb: "cartonn:DnXwAnBTsNJhHZhk@(127.0.0.1:3306)/cartonn?charset=utf8"
+
+redis:
+  maxidle: 50 # 连接池中最大空闲连接数量
+  max_active: 30 # 最大连接数量
+  idle_timeout: 300 # 最大超时时间(s)
+  port: "127.0.0.1:6379"
+
+
+
